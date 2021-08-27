@@ -1,10 +1,17 @@
+
+
+
+
+
+
+
 /* Global Variables */
 
 
 // Setting up the client to retrieve, post and dynamically update the data
-const check = document.getElementById('check');
+// const check = document.getElementById('check');
 
-generate.addEventListener ('click', confirmData);
+// check.addEventListener ('click', confirmData);
 
 function confirmData (e) {
     document.getElementById('').value;
