@@ -13,7 +13,7 @@
 
 // check.addEventListener ('click', confirmData);
 
-function confirmData (e) {
+/* function confirmData (e) {
     document.getElementById('').value;
     document.getElementById('').value;
     get()
@@ -24,10 +24,11 @@ function confirmData (e) {
     .then (updateUI())
     })
 };
-
+*/
 // Expressing the call back function
-async () => {
-    const response = await fetch()
+
+const demoTask = async () => {
+    const response = await fetch('\all')
     try{
         const data = await response.json();
         console.log(data);
@@ -37,8 +38,10 @@ async () => {
         console.log(error);}
 }
 
+demoTask();
+
 // Expressing the postData callback function
-const postData = async (url = '', data = {}) => {
+/* const postData = async (url = '', data = {}) => {
     console.log(data);
     const response = await fetch(url, {
         method: 'POST',
@@ -68,3 +71,5 @@ const updateUI = async () => {
     }catch(error){
         console.log(error);}
 }
+
+*/
