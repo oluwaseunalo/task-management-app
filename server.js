@@ -30,8 +30,8 @@ function listening (){
 }
 
 
-const projectId = {
-    tasks: [
+ tasks =
+    [
         {
             "id": 1,
             "title": "Paint the wall",
@@ -44,26 +44,26 @@ const projectId = {
             "description": 'Please make sure you clean the construction site before leaving',
             "checked": false
         }
-    ]
-};
+    ];
 
 //Setting up the GET & POST request
 
 app.get('/all', sendData);
 function sendData (req, res) {
-    res.send(projectId);
+    res.send(tasks);
 };
 
 
 app.post('/post', holder);
 function holder (req, res){
     console.log(req.body)
-    const newUpdate = {
+     newUpdate = {
        id: req.body.id,
        title: req.body.title,
        des: req.body.des,
+       bool: req.body.checked,
        status: req.body.status
     }
-    projectId=newUpdate;
-    res.send(projectId)
-} 
+    tasks.push(newUpdate);
+    res.send(tasks);
+};
