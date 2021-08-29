@@ -21,28 +21,28 @@ app.use(express.static('client'));
 
 // Setup Server
 
-const port = 8080;
+const port = 3030;
 const server = app.listen(port,listening);
 
 function listening (){
     console.log('server is running');
-    console.log(`running on the localhost:$(port)`);
+    console.log(`running on the localhost:${port}`);
 }
 
 
 const projectId = {
-    'tasks': [
+    tasks: [
         {
-            'id': 1,
-            'title': 'Paint the wall',
-            'description': 'Please paint all the walls in white color',
-            'checked': true
+            "id": 1,
+            "title": "Paint the wall",
+            "description": "Please paint all the walls in white color",
+            "checked": true
         },
         {
-            'id': 1,
-            'title': 'Clean the site',
-            'description': 'Please make sure you clean the construction site before leaving',
-            'checked': false
+            "id": 1,
+            "title": 'Clean the site',
+            "description": 'Please make sure you clean the construction site before leaving',
+            "checked": false
         }
     ]
 };
@@ -58,21 +58,12 @@ function sendData (req, res) {
 app.post('/post', holder);
 function holder (req, res){
     console.log(req.body)
-   let newUpdate = {
-       tasks: req.body.tasks[0].id,
-       checked: req.body.tasks[0].checked
-       // content: req.body.content
+    const newUpdate = {
+       id: req.body.id,
+       title: req.body.title,
+       des: req.body.description,
+       status: req.body.status
     }
     projectId=newUpdate;
     res.send(projectId)
-}
-
-/* (on success)
-{
-    'status: 'success'
-}
-
-(on error)
-{
-    'status': 'error'
-} */
+} 

@@ -14,7 +14,7 @@ const findTodoItems = () => {
             parent.removeChild(item);
             document.body.appendChild(item);
             const todoItem = document.body.appendChild(item);
-            if (todoItem=true){
+            if (todoItem){
                 resolve ('Element is successfully appended');
             }
             else {
