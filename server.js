@@ -61,7 +61,7 @@ function holder (req, res){
     const newUpdate = {
        id: req.body.id,
        title: req.body.title,
-       des: req.body.description,
+       des: req.body.des,
        status: req.body.status
     }
     projectId=newUpdate;

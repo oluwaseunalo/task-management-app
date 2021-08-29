@@ -6,6 +6,8 @@ const title = label.children[1];
 const description = label.children[2];
 const taskOneId = document.querySelector('.task__one');
 const checkBool = document.querySelector('.bool__one');
+const completeOne = document.querySelector('.complete__task');
+const workTask = document.querySelector('.work__task');
 
 // Displaying the first task data on the UI
 
@@ -38,15 +40,15 @@ completeTask.addEventListener ('click', newState);
                 console.log(data);
                 postData('/post', {id:data.tasks[0].id, title:data.tasks[0].title, des:data.tasks[0].description, status: 'sucess'})
             })
-        const h = document.createElement('h3');
-        h.textContent = 'Thank you for completing the task';
-        taskOneId.appendChild(h);
+        
+        completeOne.style.display = 'block';
+        workTask.style.display = 'none';
+        
         }
         
         else {
-            const p = document.createElement('p');
-            p.textContent = 'Please check the box when the task is completed';
-            taskOneId.appendChild(p);
+            completeOne.style.display = 'none';
+            workTask.style.display = 'block';
         };
     }
 
@@ -60,7 +62,7 @@ const getData = async () => {
         return data;
     }
     catch (error){
-        console.log(error);}
+        console.log('error', error);}
 } 
 
 
@@ -81,7 +83,7 @@ const postData = async (url = '', data = {}) => {
         return newData;
     }
     catch(error){
-        console.log(error);
+        console.log('error', error);
     }
 }
 
