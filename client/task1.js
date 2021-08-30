@@ -3,6 +3,7 @@
 const findTodoItems = () => {
     return new Promise(function(resolve, reject){
         const items = document.querySelectorAll('todo-item');
+        // Using the 'for of' method to loop over the items.
         for(item of items){
             parent.removeChild(item);
             document.body.appendChild(item);

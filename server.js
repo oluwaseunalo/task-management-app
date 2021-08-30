@@ -19,7 +19,7 @@ app.use(express.static('client'));
 
 // Setup the Server
 
-const port = 3000;
+const port = 8080;
 const server = app.listen(port,listening);
 
 function listening (){
