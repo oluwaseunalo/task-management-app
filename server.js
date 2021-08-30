@@ -21,7 +21,7 @@ app.use(express.static('client'));
 
 // Setup Server
 
-const port = 2000;
+const port = 8080;
 const server = app.listen(port,listening);
 
 function listening (){
@@ -63,7 +63,7 @@ function holder (req, res){
        title: req.body.title,
        des: req.body.des,
        bool: req.body.checked,
-       status: req.body.status
+       status: req.body.status,
     }
     projectId.push(newUpdate);
     res.send(projectId);
