@@ -1,5 +1,3 @@
-
-
 // Require Express to run server and routes
 const express = require('express');
 
@@ -19,7 +17,7 @@ app.use(cors());
 app.use(express.static('client'));
 
 
-// Setup Server
+// Setup the Server
 
 const port = 8080;
 const server = app.listen(port,listening);
@@ -29,6 +27,7 @@ function listening (){
     console.log(`running on the localhost:${port}`);
 }
 
+// Setting up the project-id as an array of tasks, where 'tasks' is an array of objects.
 
  projectId = [{
     tasks: [
@@ -47,15 +46,22 @@ function listening (){
     ]
 }
  ];
-//Setting up the GET & POST request
+//Setting up the GET request
 
+// Using the endpoint-url '/all' for testing purposes
 app.get('/all', sendData);
+
+//app.get('https://flexxter.de/Tasks/Get', sendData);
 function sendData (req, res) {
     res.send(projectId);
 };
 
+//Setting up the POST request
 
-app.post('/post', holder);
+// Using the endpoint-url '/post' for testing purposes
+ app.post('/post', holder);
+
+// app.post('https://flexxter.de/Tasks/Save', holder);
 function holder (req, res){
     console.log(req.body)
      newUpdate = {
