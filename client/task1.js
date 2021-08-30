@@ -12,8 +12,12 @@ const findTodoItems = () => {
             }
             else {
                 reject('Element cannot be found');
-            }
+            }          
         }
+        // if the Nodelist is empty and nothing to loop over.
+            if(items.length === 0){
+            reject('No element found');
+            }
         }
     )};
 

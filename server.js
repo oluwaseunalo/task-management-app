@@ -19,7 +19,7 @@ app.use(express.static('client'));
 
 // Setup the Server
 
-const port = 8080;
+const port = 3000;
 const server = app.listen(port,listening);
 
 function listening (){
@@ -46,6 +46,7 @@ function listening (){
     ]
 }
  ];
+ 
 //Setting up the GET request
 
 // Using the endpoint-url '/all' for testing purposes

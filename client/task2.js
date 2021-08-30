@@ -21,7 +21,7 @@ const updateData = async () => {
 
     try {
         const displayData = await response.json();
-        // displaying the response of the GET endpoint-url.
+        // displaying the response of the GET endpoint-url on the console.
             console.log(displayData);
       //  checkBool.innerHTML = displayData[0].tasks[0].checked;
       //  taskOneId.innerHTML = displayData[0].tasks[0].id;

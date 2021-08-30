@@ -3,9 +3,9 @@
 ## Overview
  
 
-## Instructions
+## Details
 
 
-## Extras
+## Languages
 
  
