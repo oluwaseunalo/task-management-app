@@ -61,7 +61,7 @@ function holder (req, res){
      newUpdate = {
        id: req.body.id,
        title: req.body.title,
-       des: req.body.des,
+       des: req.body.description,
        bool: req.body.checked,
        status: req.body.status,
     }
