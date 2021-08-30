@@ -15,10 +15,11 @@ const updateData = async () => {
     const response = await fetch('/all');
     try {
         const displayData = await response.json();
-      //  checkBool.innerHTML = displayData.tasks[0].checked;
-      //  taskOneId.innerHTML = displayData.tasks[0].id;
-        title.innerHTML = displayData.tasks[0].title;
-        description.innerHTML = displayData.tasks[0].description;
+        console.log(displayData);
+      //  checkBool.innerHTML = displayData[0].tasks[0].checked;
+      //  taskOneId.innerHTML = displayData[0].tasks[0].id;
+        title.innerHTML = displayData[0].tasks[0].title;
+        description.innerHTML = displayData[0].tasks[0].description;
     }
     catch(error) {
         console.log('error', error);
@@ -38,7 +39,7 @@ completeTask.addEventListener ('click', newState);
             getData()
             .then(function(data){
                 console.log(data);
-                postData('/post', {id:data.tasks[0].id, title:data.tasks[0].title, des:data.tasks[0].description, status: 'sucess'})
+                postData('/post', {id:data[0].tasks[0].id, title:data[0].tasks[0].title, des:data[0].tasks[0].description, bool:data[0].tasks[0].checked, status: 'sucess'})
             })
         
         completeOne.style.display = 'block';

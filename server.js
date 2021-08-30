@@ -21,7 +21,7 @@ app.use(express.static('client'));
 
 // Setup Server
 
-const port = 8080;
+const port = 2000;
 const server = app.listen(port,listening);
 
 function listening (){
@@ -30,8 +30,8 @@ function listening (){
 }
 
 
- tasks =
-    [
+ projectId = [{
+    tasks: [
         {
             "id": 1,
             "title": "Paint the wall",
@@ -44,13 +44,14 @@ function listening (){
             "description": 'Please make sure you clean the construction site before leaving',
             "checked": false
         }
-    ];
-
+    ]
+}
+ ];
 //Setting up the GET & POST request
 
 app.get('/all', sendData);
 function sendData (req, res) {
-    res.send(tasks);
+    res.send(projectId);
 };
 
 
@@ -64,6 +65,6 @@ function holder (req, res){
        bool: req.body.checked,
        status: req.body.status
     }
-    tasks.push(newUpdate);
-    res.send(tasks);
+    projectId.push(newUpdate);
+    res.send(projectId);
 };
