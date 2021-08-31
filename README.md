@@ -31,7 +31,7 @@
 - For testing purposes, 
   - in task2.js, remove the comment syntaxes in line 18, 49, 62, 74 and add comment syntax to line 20, 50, 63, and 76.
   - in the server.js, remove the comment syntaxes in line 53, 63 and add comment syntax to the line 55 and 65.
-  - the response is logged to the console and displayed on the interface.
+  - the response is logged to the console and a notification is displayed on the interface based on the User action.
 
 
 
