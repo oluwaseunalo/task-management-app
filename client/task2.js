@@ -1,6 +1,5 @@
 // Solution to Task 2.
 
-
 // Transversing the DOM and setting up Global Variables.
 
 const label = document.querySelector('.print__tasks');
@@ -14,10 +13,11 @@ const workTask = document.querySelector('.work__task');
 // Displaying the User's first task data on the UI.
 
 const updateData = async () => {
+    
 // Using the endpoint-url '/all' for testing purposes
-    const response = await fetch('/all');
+//    const response = await fetch('/all');
 
-// const response = await fetch('https://flexxter.de/Tasks/Get');
+    const response = await fetch('https://flexxter.de/Tasks/Get');
 
     try {
         const displayData = await response.json();
