@@ -1,5 +1,5 @@
 ## Project Title: Frontend Task
-   This repository provides solution to the task that aimed at fetching a task from the server, dynamically update the UI, allow users to check or uncheck the task and update the state in the server.
+   This repository provides a solution to the task that aimed at fetching data from the server, dynamically update the UI, allow users to check or uncheck the task provided and update the state in the server.
 
 ## Installation
 - Clone this repository or download ZIP from GitHub and open it from your favourite text editor
