@@ -26,12 +26,6 @@
 - If the checkbox is checked, the status 'success', the true state and other 'tasks' properties are posted to the post endpoint-url and pushed to the projectId. In addition, the user get a notifaction on the interface for completing the task. 
 - If the checkbox is unchecked, the status 'error', the bool 'false' and other 'tasks' properties are posted to the post endpoint-url and pushed to the projectId. In addition, the user get a notification on the interface to check the box when the task is completed.
 
-### Testing
-- Used the '/all' and '/post' as the Get and Post endpoint-urls respectively.
-- For testing purposes, 
-  - in task2.js, remove the comment syntaxes in line 18, 49, 62, 74 and add comment syntax to line 20, 50, 63, and 76.
-  - in the server.js, remove the comment syntaxes in line 53, 63 and add comment syntax to the line 55 and 65.
-  - the response is logged to the console and a notification is displayed on the interface based on the User action.
 
 
 
