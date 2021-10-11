@@ -22,7 +22,7 @@ const findTodoItems = () => {
         }
     )};
 
-findTodoItems().then(function(response){
+findTodoItems().then((response)=> {
     console.log(response);
 }).catch((error) => {
     console.log(error);
