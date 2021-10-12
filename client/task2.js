@@ -1,3 +1,65 @@
+
+
+class TodoItems extends HTMLElement {
+    constructor(){
+        super();
+        this._item = {
+            'id': 1,
+            'title': 'paint the wall',
+            'description': 'Please paint all the walls in white color',
+            'bool': true,
+         }
+     
+        }
+
+        set item(value){
+           return this._item = value
+        }
+        
+        get item(){
+           return this._item
+        }
+  
+
+    }
+
+    
+   
+
+window.customElements.define('todo-item', TodoItems)
+
+
+const list = document.querySelector('todo-item')
+
+function loadTask() {
+    list.innerHTML = `<h1>${list.item.title}</h1> <h3>${list.item.description}</h3> `
+}
+loadTask();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 // Solution to Task 2.
 
 // Transversing the DOM and setting up Global Variables.
@@ -35,9 +97,10 @@ const updateData = async () => {
 
 updateData(); 
 
+*/
 // Setting up the client to retrieve, post and dynamically update the UI.
 
-const completeTask = document.getElementById('check');
+const completeTask = document.querySelector('.check');
 
 completeTask.addEventListener ('click', newState);
 
