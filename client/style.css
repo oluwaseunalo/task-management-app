@@ -1,47 +1,5 @@
 body {
-    background-color: rgb(29, 26, 27);
-    color: whitesmoke;
-    font-size: 67.5%;
-}
-
-.intro__task {
-    margin-left: 25%;
-    margin-top: 8%;
-    justify-self: center;
-    font-size: 1.8em;
-}
-
-.complete__task {
-    display: none;
-    color: rgb(136, 193, 226);
-    font-size: 1.5em;
-    margin-left: 34%;
-    margin-top: 4%;
-}
-
-.work__task {
-    display: block;
-    color: red;
-    font-size: 1.5em;
-    margin-left: 34%;
-    margin-top: 4%;
-}
-
-.print__tasks {
-    display: inline-block;
-    margin-left: 38%;
-    margin-top: 1%;
-    justify-content: center;
-    font-size: 1.8em;
-    line-height: 120%;
-}
-
-.check__tasks {
-    position: absolute;
-    left: 35%;
-}
-
-.description__one {
-    font-size: 0.8em;
-    color: wheat;
+  background-color: rgb(29, 26, 27);
+  color: whitesmoke;
+  font-size: 67.5%;
 }

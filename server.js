@@ -48,21 +48,13 @@ function listening (){
  ];
  
 //Setting up the GET request
-
-// Using the endpoint-url '/all' for testing purposes
- app.get('/all', sendData);
-
-// app.get('https://flexxter.de/Tasks/Get', sendData);
+app.get('https://flexxter.de/Tasks/Get', sendData);
 function sendData (req, res) {
     res.send(projectId);
 };
 
 //Setting up the POST request
-
-// Using the endpoint-url '/post' for testing purposes
- app.post('/post', holder);
-
-//app.post('https://flexxter.de/Tasks/Save', holder);
+app.post('https://flexxter.de/Tasks/Save', holder);
 function holder (req, res){
     console.log(req.body)
      newUpdate = {
